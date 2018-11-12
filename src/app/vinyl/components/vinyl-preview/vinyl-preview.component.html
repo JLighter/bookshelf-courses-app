@@ -9,9 +9,9 @@
     <h5 class="bold">{{vinyl.releaseDate}}</h5>
   </div>
   <div class="section" style="text-align: center">
-    <button (click)="changeArtiste()">Modifier</button>
+    <button (click)="switchEditMode()">Modifier</button>
   </div>
-  <div class="section" style="text-align: center">
+  <div class="section" style="text-align: center" *ngIf="isEditing">
     <app-couting-buttons
       [(value)]="vinyl.releaseDate">
     </app-couting-buttons>

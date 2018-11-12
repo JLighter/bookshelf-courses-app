@@ -10,13 +10,16 @@ export class VinylPreviewComponent implements OnInit {
   @Input()
   public vinyl: any;
 
+  // Par défaut nous ne somme pas en mode edition
+  isEditing = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  changeArtiste() {
-    this.vinyl.artiste = 'King of pop';
+  switchEditMode() {
+    this.isEditing = !this.isEditing;
   }
 
 }
