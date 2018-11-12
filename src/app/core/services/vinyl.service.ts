@@ -30,17 +30,30 @@ export class VinylService {
 
   constructor() { }
 
-  // Nous écrirons ces fonctions très bientôt
+  getAll(): Array<Vinyl> {
+    return this.vinyls.slice(0, 0);
+  }
 
-  getAll(): Array<Vinyl>  {}
+  getOne(index: number): Vinyl {
+    return this.vinyls[index];
+  }
 
-  getOne(index: number): Vinyl {}
+  updateOne(index: number, vinyl: Vinyl): Array<Vinyl> {
+    if (vinyl == null) throw Error('Null or undefined vinyl');
+    this.vinyls[index] = vinyl;
+    return this.vinyls;
+  }
 
-  updateOne(index: number, vinyl: object): Array<Vinyl> {}
+  add(vinyl: Vinyl): Array<Vinyl> {
+    if (vinyl == null) throw Error('Null or undefined vinyl');
+    this.vinyls.push(vinyl);
+    return this.vinyls;
+  }
 
-  addOne(vinyl: object): Array<Vinyl> {}
-
-  delete(start: number, end: number): Array<Vinyl> {}
-
+  delete(start: number, end: number): Array<Vinyl> {
+    if (start - end > 0) throw Error('End must be higher than start');
+    this.vinyls = this.vinyls.splice(start, end - start);
+    return this.vinyls;
+  }
 
 }
