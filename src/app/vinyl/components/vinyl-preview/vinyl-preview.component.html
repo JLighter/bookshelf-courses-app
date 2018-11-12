@@ -6,7 +6,7 @@
     <h3>{{vinyl.title}} <br><small>par {{vinyl.artiste}}</small></h3>
   </div>
   <div class="section" style="text-align: center">
-    <h5 class="bold">{{vinyl.releaseDate}}</h5>
+    <h5 class="bold" [ngStyle]="{color: getDateColor()}">{{vinyl.releaseDate}}</h5>
   </div>
   <div class="section" style="text-align: center">
     <button (click)="switchEditMode()">Modifier</button>

@@ -22,4 +22,8 @@ export class VinylPreviewComponent implements OnInit {
     this.isEditing = !this.isEditing;
   }
 
+  getDateColor() {
+    return this.isEditing ? 'green' : 'black';
+  }
+
 }
