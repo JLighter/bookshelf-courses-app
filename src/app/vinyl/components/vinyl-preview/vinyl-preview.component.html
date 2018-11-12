@@ -6,14 +6,6 @@
     <h3>{{vinyl.title}} <br><small>par {{vinyl.artiste}}</small></h3>
   </div>
   <div class="section" style="text-align: center">
-    <h5 class="bold" [ngClass]="{'editable': isEditing}">{{vinyl.releaseDate}}</h5>
-  </div>
-  <div class="section" style="text-align: center">
-    <button (click)="switchEditMode()">Modifier</button>
-  </div>
-  <div class="section" style="text-align: center" *ngIf="isEditing">
-    <app-couting-buttons
-      [(value)]="vinyl.releaseDate">
-    </app-couting-buttons>
+    <h5 class="bold">{{vinyl.releaseDate | date:'LLL d, yyyy'}}</h5>
   </div>
 </div>

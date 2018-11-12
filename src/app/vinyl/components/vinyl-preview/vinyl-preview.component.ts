@@ -10,16 +10,9 @@ export class VinylPreviewComponent implements OnInit {
   @Input()
   public vinyl: any;
 
-  // Par défaut nous ne somme pas en mode edition
-  isEditing = false;
-
   constructor() { }
 
   ngOnInit() {
-  }
-
-  switchEditMode() {
-    this.isEditing = !this.isEditing;
   }
 
 }
