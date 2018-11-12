@@ -4,4 +4,8 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<app-vinyl-preview [vinyl]="mjVinyl"></app-vinyl-preview>
+<div class="container">
+  <div class="row">
+    <app-vinyl-preview *ngFor="let vinyl of vinyls" [vinyl]="vinyl"></app-vinyl-preview>
+  </div>
+</div>
