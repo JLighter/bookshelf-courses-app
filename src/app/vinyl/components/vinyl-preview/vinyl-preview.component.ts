@@ -15,4 +15,8 @@ export class VinylPreviewComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeArtiste() {
+    this.vinyl.artiste = 'King of pop';
+  }
+
 }

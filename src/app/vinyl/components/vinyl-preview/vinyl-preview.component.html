@@ -1,6 +1,6 @@
 <div class="card">
   <div class="section media">
-    <img height="150" [src]="vinyl.imageUrl" alt="Album photo of {{vinyl.title}}" >
+    <img height="200" [src]="vinyl.imageUrl" alt="Album photo of {{vinyl.title}}">
   </div>
   <div class="section">
     <h3>{{vinyl.title}} <br><small>par {{vinyl.artiste}}</small></h3>
@@ -8,5 +8,7 @@
   <div class="section" style="text-align: center">
     <h5 class="bold">{{vinyl.releaseDate}}</h5>
   </div>
+  <div class="section" style="text-align: center">
+    <button (click)="changeArtiste()">Modifier</button>
+  </div>
 </div>
-
