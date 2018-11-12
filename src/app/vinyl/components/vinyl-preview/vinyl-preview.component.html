@@ -11,4 +11,10 @@
   <div class="section" style="text-align: center">
     <button (click)="changeArtiste()">Modifier</button>
   </div>
+  <div class="section" style="text-align: center">
+    <app-couting-buttons
+      [value]="vinyl.releaseDate"
+      (valueChange)="changeReleaseDate($event)">
+    </app-couting-buttons>
+  </div>
 </div>

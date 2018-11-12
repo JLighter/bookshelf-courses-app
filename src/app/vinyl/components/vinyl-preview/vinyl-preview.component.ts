@@ -19,4 +19,8 @@ export class VinylPreviewComponent implements OnInit {
     this.vinyl.artiste = 'King of pop';
   }
 
+  changeReleaseDate(value: number) {
+    this.vinyl.releaseDate = value;
+  }
+
 }
