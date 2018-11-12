@@ -6,7 +6,7 @@ import {Vinyl} from '../models/vinyl';
 })
 export class VinylService {
 
-  private vinyls: Array<object> = [{
+  private vinyls: Array<Vinyl> = [{
     title: 'Bad',
     artiste: 'Michael Jackson',
     imageUrl: 'https://img-4.linternaute.com/PI-AYLwdrSAlAsBVE53jZasrWYM=/350x/smart/4184ae2fdda74cb5b2e150bc98efebe8/ccmcms-linternaute/19006.jpg',
@@ -32,15 +32,15 @@ export class VinylService {
 
   // Nous écrirons ces fonctions très bientôt
 
-  getAll(): Array<object>  {}
+  getAll(): Array<Vinyl>  {}
 
-  getOne(index: number): object {}
+  getOne(index: number): Vinyl {}
 
-  updateOne(index: number, vinyl: object): Array<object> {}
+  updateOne(index: number, vinyl: object): Array<Vinyl> {}
 
-  addOne(vinyl: object): Array<object> {}
+  addOne(vinyl: object): Array<Vinyl> {}
 
-  delete(start: number, end: number): Array<object> {}
+  delete(start: number, end: number): Array<Vinyl> {}
 
 
 }
